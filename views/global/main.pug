@@ -1,0 +1,22 @@
+extends ../globalBase.pug
+
+block content
+    section.main    
+        h1 영명중 Attendance System
+
+        p #{errorMsg}
+
+        form(action="/result" method="GET")
+            select(name="g")
+                option(value=false) --선택--
+                option(value="1") 1학년
+                option(value="2") 2학년
+                option(value="3") 3학년
+
+            select(name="c")
+                option(value=false) --선택--
+                option(value="1") 1반
+                option(value="2") 2반
+            input(type="submit" value="확인") 
+            a(href="/admin/student") 추가하기
+            

@@ -1,0 +1,19 @@
+extends ../globalBase.pug
+
+block content
+    .resultTop
+        form(action="/" method="GET")
+            input(type="submit" value="<- BACK")
+
+    ul.resultList
+        li 이름
+        li 학년
+        li 반
+ 
+    
+
+    each stu in list
+        ul.dataList
+            li #{stu.name}
+            li #{stu.grade}
+            li #{stu.ban}

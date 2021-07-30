@@ -1,0 +1,27 @@
+extends ../adminBase.pug
+
+block content
+    p #{msg}
+
+    form(action="/admin/createStudent" method="POST")
+        .createBox
+            p 학생 이름
+            input(type="text" name="stu_name" required)
+        .createBox
+            p 학년
+            select(name="stu_grade")
+                option(value=false) --선택--
+                option(value="1") 1학년
+                option(value="2") 2학년
+                option(value="3") 3학년
+        .createBox
+            p 반
+            select(name="stu_class")
+                option(value=false) --선택--
+                option(value="1") 1반
+                option(value="2") 2반
+
+
+        input(type="submit" value="추가하기")
+
+        a(href="/") Home

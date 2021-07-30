@@ -1,0 +1,27 @@
+@import "./m_main.css";
+@import "./reset.css";
+@import "./result.css";
+
+a {
+  width: 60px;
+  height: 30px;
+
+  background-color: salmon;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline: none;
+  align-self: center;
+  cursor: pointer;
+  font-weight: bold;
+
+  font-size: 12px;
+}
+
+a:hover {
+  animation: random-bg 2s linear infinite, grow 3000ms ease infinite;
+}
